@@ -1,12 +1,15 @@
 import React from 'react';
+import Counter from './Counter';
 
-function Item() {
+function Item({option}) {
+  const {title, img, description, price} = option
   return (
     <li>
-      <img src="https://cdn.panelinha.com.br/receita/1588270905274-39_Panelinha_12_02_200635.jpg" />
-      <p className="title">Feijoada</p>
-      <p className="description">Uma feijoada muito da gostosinha</p>
-      <p className="price">R$ 24,50</p>
+      <img src={img} alt={title} />
+      <p className="title">{title}</p>
+      <p className="description">{description}</p>
+      <p className="price">R$ {price.toFixed(2).replace('.', ',')}</p>
+      <Counter />
     </li>
   );
 }

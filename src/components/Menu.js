@@ -1,15 +1,24 @@
 import React from 'react';
 import Item from './Item';
+import menuData from '../data/menuData';
 
 function Menu() {
   return (
     <main>
-      <p>Primeiro, seu prato</p>
-      <ul>
-       <Item />
-       <Item />
-       <Item />
-      </ul>
+      {
+        menuData.map(menu => {
+          return(
+            <React.Fragment key={menu.id}>
+              <p>{menu.categoryText}</p>
+              <ul>
+                {
+                  menu.options.map(option => <Item key={option.id} option={option} />)
+                }
+              </ul>
+            </React.Fragment>
+          )
+        })
+      }
     </main>
   );
 }
