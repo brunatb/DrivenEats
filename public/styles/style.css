@@ -50,6 +50,10 @@ button {
   border-radius: 50px;
 }
 
+button.checkout {
+  background: #32b72f;
+}
+
 main {
   margin: 123px 0;
   padding: 0 19px;

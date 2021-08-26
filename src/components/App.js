@@ -20,7 +20,7 @@ function App() {
     <>
       <Header />
       <Menu order={order} setOrder={setOrder} />
-      <Footer />
+      <Footer order={order} />
     </>
   );
 }
