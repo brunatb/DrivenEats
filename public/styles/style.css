@@ -98,8 +98,8 @@ li img {
 
 .counter {
   position: absolute;
-  bottom: 18px;
-  right: 14px;
+  bottom: 10px;
+  right: 8px;
   width: 47px;
   height: 19px;
   display: flex;
@@ -117,8 +117,12 @@ li img {
   color: #32b72f;
 }
 
-li .counter.hidden {
-  display: none;
+li.selected {
+  padding: 10px 6px;
+  border-top: 8px solid #32b72f;
+  border-bottom: 8px solid #32b72f;
+  border-left: 8px solid #32b72f;
+  border-right: 8px solid #32b72f;
 }
 
 .title {

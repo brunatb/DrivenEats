@@ -1,6 +1,7 @@
 const menuData = [
   {
     id: 1,
+    category: "food",
     categoryText: "Primeiro, seu prato",
     options: [
       {
@@ -28,6 +29,7 @@ const menuData = [
   },
   {
     id: 5,
+    category: "drink",
     categoryText: "Agora, sua bebida",
     options: [
       {
@@ -55,6 +57,7 @@ const menuData = [
   },
   {
     id: 9,
+    category: "dessert",
     categoryText: "Por fim, sua sobremesa",
     options: [
       {

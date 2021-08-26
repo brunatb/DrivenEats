@@ -2,7 +2,7 @@ import React from 'react';
 import Item from './Item';
 import menuData from '../data/menuData';
 
-function Menu() {
+function Menu({order, setOrder}) {
   return (
     <main>
       {
@@ -12,7 +12,14 @@ function Menu() {
               <p>{menu.categoryText}</p>
               <ul>
                 {
-                  menu.options.map(option => <Item key={option.id} option={option} />)
+                  menu.options.map(option => 
+                  <Item 
+                    key={option.id} 
+                    category={menu.category} 
+                    option={option}
+                    order={order}
+                    setOrder={setOrder} 
+                  />)
                 }
               </ul>
             </React.Fragment>
