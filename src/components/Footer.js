@@ -6,9 +6,9 @@ function Footer({order}) {
   function sendOrder(){
     const totalPrice = getTotalPrice();
     const message= `Olá, gostaria de fazer o pedido:
-    - Prato:${order.food.choices.map(c => ` ${c.title}`)}
-    - Bebida:${order.drink.choices.map(c => ` ${c.title}`)}
-    - Sobremesa:${order.dessert.choices.map(c => ` ${c.title}`)}
+    - Prato:${order.food.choices.map(c => ` ${c.title} (${c.quantity}x)`)}
+    - Bebida:${order.drink.choices.map(c => ` ${c.title} (${c.quantity}x)`)}
+    - Sobremesa:${order.dessert.choices.map(c => ` ${c.title} (${c.quantity}x)`)}
     Total: R$ ${totalPrice.toFixed(2).replace('.', ',')} 
     `;
 
